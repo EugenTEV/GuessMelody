@@ -1,7 +1,7 @@
 ﻿
 namespace GuessMelody
 {
-    partial class Form1
+    partial class fMain
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,13 +29,64 @@ namespace GuessMelody
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnParams = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPlay.Location = new System.Drawing.Point(146, 71);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(389, 59);
+            this.btnPlay.TabIndex = 0;
+            this.btnPlay.Text = "Игра";
+            this.btnPlay.UseVisualStyleBackColor = true;
+            // 
+            // btnParams
+            // 
+            this.btnParams.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnParams.Location = new System.Drawing.Point(146, 137);
+            this.btnParams.Name = "btnParams";
+            this.btnParams.Size = new System.Drawing.Size(389, 59);
+            this.btnParams.TabIndex = 1;
+            this.btnParams.Text = "Настройки";
+            this.btnParams.UseVisualStyleBackColor = true;
+            this.btnParams.Click += new System.EventHandler(this.btnParams_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.Location = new System.Drawing.Point(146, 201);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(389, 59);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Выход";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // fMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(696, 413);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnParams);
+            this.Controls.Add(this.btnPlay);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "fMain";
+            this.Text = "Угадай мелодию";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnParams;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
